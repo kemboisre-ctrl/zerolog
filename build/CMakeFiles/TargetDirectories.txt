@@ -1,0 +1,11 @@
+/home/ubuntu/zerolog_hybrid/build/CMakeFiles/zerolog.dir
+/home/ubuntu/zerolog_hybrid/build/CMakeFiles/zerolog_benchmark.dir
+/home/ubuntu/zerolog_hybrid/build/CMakeFiles/zerolog_example.dir
+/home/ubuntu/zerolog_hybrid/build/CMakeFiles/zerolog_cpu_only.dir
+/home/ubuntu/zerolog_hybrid/build/CMakeFiles/test.dir
+/home/ubuntu/zerolog_hybrid/build/CMakeFiles/edit_cache.dir
+/home/ubuntu/zerolog_hybrid/build/CMakeFiles/rebuild_cache.dir
+/home/ubuntu/zerolog_hybrid/build/CMakeFiles/list_install_components.dir
+/home/ubuntu/zerolog_hybrid/build/CMakeFiles/install.dir
+/home/ubuntu/zerolog_hybrid/build/CMakeFiles/install/local.dir
+/home/ubuntu/zerolog_hybrid/build/CMakeFiles/install/strip.dir

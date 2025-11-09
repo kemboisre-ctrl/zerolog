@@ -1,0 +1,2 @@
+/usr/bin/ar qc libzerolog.a CMakeFiles/zerolog.dir/src/logger.cpp.o
+/usr/bin/ranlib libzerolog.a

@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG -Wl,--gc-sections CMakeFiles/zerolog_cpu_only.dir/benchmarks/cpu_only.cpp.o -o zerolog_cpu_only  libzerolog.a /usr/lib/x86_64-linux-gnu/libbenchmark.so.1.6.1 /usr/lib/x86_64-linux-gnu/libfmt.so.8.1.1 -Wl,--as-needed 
