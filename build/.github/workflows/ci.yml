@@ -1,0 +1,42 @@
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+  build-and-test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+        compiler: [gcc, clang]
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Install dependencies (Ubuntu)
+        if: runner.os == 'Linux'
+        run: sudo apt-get install -y cmake libfmt-dev libbenchmark-dev
+      
+      - name: Install dependencies (macOS)
+        if: runner.os == 'macOS'
+        run: brew install cmake fmt benchmark
+        
+      - name: Configure
+        run: |
+          mkdir build && cd build
+          cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_FLAGS="-Werror" ..
+        
+      - name: Build
+        run: cmake --build build --parallel
+        
+      - name: Test
+        run: ./build/zerolog_example
+        
+      - name: Benchmark
+        run: ./build/zerolog_benchmark --benchmark_repetitions=3
+        
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: benchmark-results-${{ matrix.os }}-${{ matrix.compiler }}
+          path: build/zerolog_benchmark_results.json
